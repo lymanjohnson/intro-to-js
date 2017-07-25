@@ -3,25 +3,25 @@
 // 1.
 // What does `givenName` equal right now?
 let givenName;
-// A:
+// A:undefined
 
 
 // 2.
 // What is `givenName` set to right now?
 givenName = "Tim";
-// A:
+// A:"Tim"
 
 
 // 3.
 // What is `givenName` set to right now?
 givenName = givenName;
-// A:
+// A:"Tim"
 
 
 // 4.
 // What is `greeting` set to?
 let greeting = "Hello, how are you? " + givenName;
-// A:
+// A:"Hello, how are you? Tim"
 
 
 // 5.
@@ -29,13 +29,13 @@ let greeting = "Hello, how are you? " + givenName;
 let high = 50;
 let low  = 10;
 let math = high - low;
-// A:
+// A: 40
 
 
 // 6.
 // What is `math` set to?
 math = high - "5";
-// A:
+// A: 35
 
 
 // 7.
@@ -44,19 +44,21 @@ math = high - "5";
 // The answer shoud not be written in a comment.
 let born = 1984;
 let today = 2017;
-// A:
+let timsAge = today - born
+let theAnswer = "Tim is " + timsAge + " years old"
+// A: You can type console.log(theAnswer); if you want the answer to print
 
 
 // 8.
 // Adjust this code. Store some information in the following variables.
 // A:
-let yourName;
-let instructorName;
+let yourName = "Lyman";
+let instructorName = "Kelly";
 
 
 // 9.
 // Update the variables `yourName` and `instructorName` so the expression below reads correctly.
-// A:
+// A: It appears to already be fine. Am I undertanding this question right?
 
 
 // This statement should read correctly
@@ -66,11 +68,11 @@ let statement = yourName + " is taking a class at The Iron Yard, my instructor's
 // 10.
 // We've created a variable named after each primitive type.
 // Use the `=` operator to assign a value to each variable matching the type in the name.
-let myNumber;
-let myString;
-let myBoolean;
+let myNumber = 6.28319; //forget pi, tau is the real shit
+let myString = "tau";
+let myBoolean = true;
 // This one's a little tricky - think carefully about what makes a value "undefined"!
-let myUndefined;
+let myUndefined = "";
 // A:
 
 
@@ -78,47 +80,47 @@ let myUndefined;
 
 // 11.
 let x = (false == 0);
-// A.
+// A. true
 
 
 // 12.
 let y = (false == "");
-// A.
+// A. true
 
 
 // 13.
 let z = (0 == "");
-// A.
+// A. true
 
 
 // 14.
 let a = (null == null);
-// A.
+// A.true
 
 
 // 25.
 let b = (undefined == undefined);
-// A.
+// A.true
 
 
 // 16.
 let c = (undefined == null);
-// A.
+// A. true
 
 
 // 17.
 let d = (null == false);
-// A.
+// A. false
 
 
 // 18.
 let e = (NaN == null);
-// A.
+// A. false
 
 
 // 19.
 let f = (NaN == NaN);
-// A.
+// A. false
 
 
 // 20.
@@ -127,7 +129,7 @@ let f = (NaN == NaN);
 // A:
 let thirsty = true;
 
-{
+if (thirsty) {
   console.log("I'm parched!");
 } else {
   console.log("I've had enough to drink.");
@@ -136,14 +138,14 @@ let thirsty = true;
 // For questions 21 - 29 list which statement will be logged.
 
 // 21.
-let x;
+let g;
 
-if(x){
+if(g){
 	console.log("True!");
 } else {
 	console.log("False!");
 }
-// A:
+// A: False!
 
 
 // 22.
@@ -152,19 +154,19 @@ if(""){
 } else {
 	console.log("False!");
 }
-// A:
+// A: False!
 
 
 // 23.
 // this expression will set x to NaN
-let x = 1 * undefined;
+let h = 1 * undefined;
 
-if(x){
+if(h){
 	console.log("True!");
 } else {
 	console.log("False!");
 }
-// A:
+// A: False!
 
 
 // 24.
@@ -173,7 +175,7 @@ if(false){
 } else {
 	console.log("False!");
 }
-// A:
+// A: False!
 
 
 // 25.
@@ -182,7 +184,7 @@ if(-5 && 5){
 } else {
 	console.log("False!");
 }
-// A:
+// A: True!
 
 
 // 26.
@@ -191,7 +193,7 @@ if("Hello World!"){
 } else {
 	console.log("False!");
 }
-// A:
+// A:  True!
 
 
 // 27.
@@ -200,7 +202,7 @@ if({}){
 } else {
 	console.log("False!");
 }
-// A:
+// A: True! (it's an empty set, so its contents are false, but the set itself is not undefined and so it's true)
 
 
 // 28.
@@ -209,7 +211,7 @@ if({name: "Yehuda Katz"}){
 } else {
 	console.log("False!");
 }
-// A:
+// A: True!
 
 
 // 29.
@@ -218,8 +220,9 @@ if(new Date()){
 } else {
 	console.log("False!");
 }
-// A:
+// A: True!
 
 
 // 30.
 // Link this file to the sibling `index.html` document, open the file in your browser and make sure there are no errors in your console.
+//There were errors, some variables had been declared too many times so I changed them to new variables. I could have also fixed it by removing the "let" commands on the duplicate declarations so that they would just be redefined instead of redeclared.
